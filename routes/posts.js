@@ -20,12 +20,13 @@ router.post('/', function(req, res){
 });
 
 router.put('/', function(req, res){
-	Post.findByIdAndUpdate(req.body._id , req.body, function(err, post){
+	console.log(req.body.change);
+	Post.update({time: req.body.time}, {$set: {message: req.body.change}}, function(err, post){
 		res.send(post);
 	});
 });
 router.delete('/', function(req, res){
-	console.log(req.body.time);
+	console.log(req.body.change);
 	Post.remove({time: req.body.time}, function(err, post){
 		res.send(post);
 	});

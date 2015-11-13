@@ -6,6 +6,7 @@ function init() {
   $('#submit').click(add);
   $('i.fa.fa-trash.fa-lg').click(deletePost);
   $('i.fa.fa-pencil.fa-lg').click(editPost);
+  $('i.fa.fa-floppy-o.fa-lg').click(savePost);
 }
 
 function add() {
@@ -68,5 +69,23 @@ function deletePost(e){
 function editPost(e){
   var $target = $(e.target);
   var $targetDiv = $target.closest('div');
-  var div = $targetDiv.attr('contentedtiable', true);
+  $targetDiv.children('#message').attr('contentEditable', true);
+  console.log('Editing!');
+}
+function savePost(e){
+  var $target = $(e.target);
+  var $targetDiv = $target.closest('div');
+  var div = $targetDiv.children('#message').attr('contentEditable', false);
+  var changedText = $targetDiv.children('#message').text();
+  console.log(changedText);
+  var tdiv = $targetDiv[0];
+  var timeStamp = tdiv.children.time.textContent;
+  $.ajax({
+    url: '/posts',
+    type: 'PUT',
+    data: {time: timeStamp, change: changedText},
+    success: function(result) {
+        console.log('edited')
+    }
+})
 }
