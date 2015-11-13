@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  head
+    title Message board
+    link(href="bower_components/bootstrap/dist/css/bootstrap.min.css", rel='stylesheet')
+    link(href="bower_components/font-awesome/css/font-awesome.min.css", rel='stylesheet')
+    link(href="css/style.css", rel='stylesheet')
+  body
+    h1 Message Board
+    .container
+      - var properties = ['name', 'subject', 'message', 'time']
+      .row
+      h1 Create A Message!
+      .row
+      tbod
+        label name
+          input#name
+        label subject
+          input#subject
+        label message
+          textarea#message
+        button.btn#submit add
+      .row
+      div#postList
+      each item, index in items
+        div
+          each prop in properties
+            div(class= prop , id= prop)= items[index][prop]
+            &nbsp;
+          i.fa.fa-pencil.fa-lg
+          &nbsp;
+          i.fa.fa-trash.fa-lg
+          &nbsp;
+          i.fa.fa-floppy-o.fa-lg
+    script(src='bower_components/jquery/dist/jquery.min.js')
+    script(src='js/main.js')
+    

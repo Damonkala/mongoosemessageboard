@@ -1,13 +1,43 @@
 doctype html
 html(lang="en")
   head
-    title Home
-    link(href="bower_components/bootstrap/dist/css/bootstrap.min.css")
-    link(href="css/style.css")
+    title Message board
+    link(href="bower_components/bootstrap/dist/css/bootstrap.min.css", rel='stylesheet')
+    link(href="bower_components/font-awesome/css/font-awesome.min.css", rel='stylesheet')
+    link(href="css/style.css", rel='stylesheet')
   body
+    h1 Message Board
     .container
-      br
-      .jumbotron
-        h1 Hey!
+      - var properties = ['name', 'subject', 'message', 'time']
+      .row
+      .container
+        .row
+          h1 Message board
+          .row
+          tbod
+            label name
+              input#name
+            label subject
+              input#subject
+            label message
+              textarea#message
+        button.btn#submit add
+      .row
+        thead
+          tr
+            each prop in properties
+              th= prop
+            th: th
+        tbody#postList
+          each item, index in items
+            tr
+              each prop in properties
+                td(class= prop , id= prop)= items[index][prop]
+              td.edit.text-center
+                i.fa.fa-pencil.fa-lg
+                button.btn.save Save      
+              td.delete.text-center
+                i.fa.fa-trash.fa-lg
     script(src='bower_components/jquery/dist/jquery.min.js')
     script(src='js/main.js')
+    

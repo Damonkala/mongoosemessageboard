@@ -6,6 +6,10 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/postapp');
+
+
 var app = express();
 
 app.set('view engine', 'jade');
@@ -18,6 +22,7 @@ app.use(express.static('public'));
 
 // ROUTES
 app.use('/', require('./routes/index'));
+app.use('/posts', require('./routes/posts'));
 
 // 404 HANDLER
 app.use(function(req, res){

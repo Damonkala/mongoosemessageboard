@@ -1,7 +1,7 @@
 {
   "name": "expresstest",
   "version": "1.0.0",
-  "description": "",
+  "description": "First, cd into the project directory, and do `npm run setup` to install the dependencies listed in the package.json and bower.json.  Then you can start the server in Node.",
   "main": "app.js",
   "author": "",
   "scripts": {
@@ -18,6 +18,16 @@
     "bower": "^1.6.5",
     "express": "^4.13.3",
     "jade": "^1.11.0",
+    "mongoose": "^4.2.5",
     "morgan": "^1.6.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingHouseFI/express-sample.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodingHouseFI/express-sample/issues"
+  },
+  "homepage": "https://github.com/CodingHouseFI/express-sample#readme"
 }
