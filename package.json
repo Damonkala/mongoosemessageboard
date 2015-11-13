@@ -22,10 +22,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodingHouseFI/express-sample.git"
+    "url": "https://github.com/Damonkala/mongoosemessageboard"
   },
   "bugs": {
-    "url": "https://github.com/CodingHouseFI/express-sample/issues"
+    "url": "https://github.com/Damonkala/mongoosemessageboard"
   },
-  "homepage": "https://github.com/CodingHouseFI/express-sample#readme"
+  "homepage": "https://github.com/Damonkala/mongoosemessageboard"
 }
