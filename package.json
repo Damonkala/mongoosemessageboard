@@ -5,8 +5,7 @@
   "main": "app.js",
   "author": "",
   "scripts": {
-    "start": "node app.js",
-    "postinstall": "bower i"
+    "start": "node app.js"
 
   },
   "engines": {
