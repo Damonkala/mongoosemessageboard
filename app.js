@@ -23,7 +23,7 @@ app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 // ROUTES
 // app.use('/', require('./routes/index'));
-app.use('/posts', require('./routes/posts'));
+app.use('/', require('./routes/posts'));
 
 // 404 HANDLER
 app.use(function(req, res){
