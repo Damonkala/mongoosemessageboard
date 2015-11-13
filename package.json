@@ -1,12 +1,11 @@
 {
-  "name": "",
+  "name": "mongoosetest",
   "version": "1.0.0",
-  "description": "",
+  "description": "You can put in your name, subject and message. The post is also timestamped. You can also remove posts.",
   "main": "app.js",
   "author": "",
   "scripts": {
     "start": "node app.js"
-
   },
   "engines": {
     "node": "5.0.0"
