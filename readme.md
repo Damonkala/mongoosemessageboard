@@ -1,3 +1,3 @@
-# Express Example
+# Moongoose database message board
 
-First, cd into the project directory, and do `npm run setup` to install the dependencies listed in the package.json and bower.json.  Then you can start the server in Node.
+You can put in your name, subject and message. The post is also timestamped. You can also remove posts.
